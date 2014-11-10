@@ -8,4 +8,6 @@
 .Rdata
 
 # RStudio files
+*.Rproj
 .Rproj.user/
+.Rproj.user
