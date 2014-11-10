@@ -11,3 +11,7 @@
 *.Rproj
 .Rproj.user/
 .Rproj.user
+
+# Data files and export files
+data/
+*.asc
