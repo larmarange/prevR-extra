@@ -1,4 +1,5 @@
 require(prevR)
+require(gstat)
 
 Noptim <- function(object) {
   clusters               = slot(object,"clusters")
@@ -50,6 +51,8 @@ theme_prevR_light <- function (base_size = 12) {
 prevR <- function(object, N=Noptim(object), nb.cells=100, cell.size=NULL, weighted=NULL, plot.results=TRUE, return.results=FALSE, legend.title="%", cex=0.7, progression=TRUE) {
   if (!require(prevR))
     stop("Package prevR is required.")
+  if (!require(gstat))
+    stop("Package gstat is required.")
   if (!is.prevR(object))
     stop("object must be of class prevR.")
   if (plot.results & !require(ggplot2))
